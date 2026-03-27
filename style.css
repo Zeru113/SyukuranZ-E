@@ -1,0 +1,148 @@
+:root {
+    --colorTheme: #a47b23;
+    --bg: rgba(122, 109, 109, 1);
+    --shadow: 0 2px 2px rgba(0,0,0/0.5);
+}
+
+body {
+    font-size: 1.2rem;
+    font-family: 'Work Sans', sans-serif;
+    background-color: var(--bg);
+    overflow: visible;
+}
+
+.envelope {
+    position: relative;
+    min-height: 100vh;
+}
+.envelope .container { 
+    margin-top: 300px;
+} 
+
+.envelope h3, .envelope p {
+    color: white;
+}
+
+.envelope::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./img/thumbnail.webp);
+    filter: blur(2px) brightness(0.6);
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.envelope h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 3rem;
+    text-shadow: black 0px 0px 10px;
+}
+
+.envelope h2, .info h2, .konfirmasi h2 {
+    color: var(--colorTheme);
+    text-shadow: black 0px 0 10px;
+}
+
+.envelope h2{
+    font-family: 'Tangerine', cursive;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.envelope p {
+    font-size: 1.5rem;
+}
+
+.envelope a, .info a, .countdown a, .konfirmasi button{
+    color: white;
+    background-color: var(--colorTheme);
+}
+
+.envelope a:hover, .info a:hover, .countdown a:hover, .konfirmasi button:hover {
+    color: var(--colorTheme);
+    background-color: white;
+}
+
+.bridegroom, .ayat, .info {
+    min-height: 100vh;
+    color:white;
+    /* mix-blend-mode: difference; */
+    text-shadow: black 0px 2px 0px;
+}
+
+.bridegroom .couple {
+    margin-top: 50px;
+}
+
+.bridegroom, .info {
+    background-image: url(./infobackground.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.bridegroom h3 {
+    font-family: 'Tangerine', cursive;
+    color: var(--colorTheme);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: black 0px 0px 10px;
+}
+
+.info {
+    position: relative;
+    min-height: 100vh;
+}
+
+.info label {
+    font-size: 1rem;
+    color: white;
+}
+
+.info .alamat {
+    font-size: 1.1rem;
+}
+
+.info .tanggal {
+    font-size: 1.5rem;
+    color: var(--colorTheme);
+}
+
+.info p {
+    text-shadow: black 0px 0px 10px;
+}
+
+.carousel-inner {
+    justify-content: center;
+    align-items: center;
+}
+
+.audio-icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    position: fixed;
+    bottom: 4rem;
+    right: 2rem;
+    cursor: pointer;
+    opacity: 0.5;
+    mix-blend-mode: difference;
+    animation: rotate 4s linear infinite;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
